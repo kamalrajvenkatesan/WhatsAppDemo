@@ -9,7 +9,7 @@
 import Foundation
 
 /** load json from json file */
-public func loadJson<T: Decodable>(from fileName: String) -> T? {
+public func loadJson<T: Decodable>(type: T.Type, fileName: String) -> T? {
 
   guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
 
@@ -21,8 +21,11 @@ public func loadJson<T: Decodable>(from fileName: String) -> T? {
     let jsonData = try decoder.decode(T.self, from: data)
 
     return jsonData
-  } catch {
+  } catch let error {
+    print(error)
     return nil
   }
 
 }
+
+
