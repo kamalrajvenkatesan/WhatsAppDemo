@@ -7,17 +7,17 @@
 //
 
 import UIKit
+/** Generic table view cell*/
+open class BaseTableViewCell<M>: UITableViewCell {
 
-public class BaseTableViewCell<M>: UITableViewCell {
+  open var item: M!
 
-  public var item: M!
-
-  override public func awakeFromNib() {
+  override open func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
   }
 
-  override public func setSelected(_ selected: Bool, animated: Bool) {
+  override open func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
 
     // Configure the view for the selected state

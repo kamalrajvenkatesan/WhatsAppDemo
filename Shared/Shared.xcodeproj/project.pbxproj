@@ -10,6 +10,7 @@
 		5287B209215243B200CB2812 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B207215243B200CB2812 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B212215244D000CB2812 /* BaseTableViewCell.swift */; };
 		5287B2152152451B00CB2812 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B2142152451B00CB2812 /* BaseTableView.swift */; };
+		5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		5287B208215243B200CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5287B212215244D000CB2812 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		5287B2142152451B00CB2812 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				5287B212215244D000CB2812 /* BaseTableViewCell.swift */,
 				5287B2142152451B00CB2812 /* BaseTableView.swift */,
+				5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */,
 			);
 			path = "Generic Table View";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */,
 				5287B2152152451B00CB2812 /* BaseTableView.swift in Sources */,
 				5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */,
 			);

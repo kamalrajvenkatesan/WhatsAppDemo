@@ -7,12 +7,22 @@
 //
 
 import UIKit
+/** Generic table view, Associated with Base Table view cell*/
+public class BaseTableView<T: BaseTableViewCell<M>, M>: UITableView {
 
-public class BaseTableView<T: BaseTableViewCell<U>, U>: UITableView {
-
-  public var items: [U] = []
+  public var items: [M] = [] {
+    didSet {
+      self.reloadData()
+    }
+  }
 
   let cellReuseId = "CellId"
+
+  public override func awakeFromNib() {
+    super.awakeFromNib()
+
+    self.register(T.self, forCellReuseIdentifier: cellReuseId)
+  }
 
   override public func numberOfRows(inSection section: Int) -> Int {
     return self.items.count
@@ -20,10 +30,11 @@ public class BaseTableView<T: BaseTableViewCell<U>, U>: UITableView {
 
   override public func cellForRow(at indexPath: IndexPath) -> UITableViewCell? {
     
-    let cell = self.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! BaseTableViewCell<U>
+    let cell = self.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! BaseTableViewCell<M>
     cell.item = self.items[indexPath.row]
 
     return cell
   }
 
 }
+
