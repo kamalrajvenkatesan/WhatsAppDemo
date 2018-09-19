@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5287B209215243B200CB2812 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B207215243B200CB2812 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B212215244D000CB2812 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5287B204215243B200CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B207215243B200CB2812 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		5287B208215243B200CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5287B212215244D000CB2812 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		5287B206215243B200CB2812 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5287B2112152449D00CB2812 /* Generic Table View */,
 				5287B207215243B200CB2812 /* Shared.h */,
 				5287B208215243B200CB2812 /* Info.plist */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		5287B2112152449D00CB2812 /* Generic Table View */ = {
+			isa = PBXGroup;
+			children = (
+				5287B212215244D000CB2812 /* BaseTableViewCell.swift */,
+			);
+			path = "Generic Table View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					5287B203215243B200CB2812 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 		5287B20D215243B200CB2812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +290,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kamalraj.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +299,7 @@
 		5287B20E215243B200CB2812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
