@@ -8,17 +8,17 @@
 
 import UIKit
 
-class BaseTableView<T: BaseTableViewCell<U>, U>: UITableView {
+public class BaseTableView<T: BaseTableViewCell<U>, U>: UITableView {
 
-  var items: [U] = []
+  public var items: [U] = []
 
   let cellReuseId = "CellId"
 
-  override func numberOfRows(inSection section: Int) -> Int {
+  override public func numberOfRows(inSection section: Int) -> Int {
     return self.items.count
   }
 
-  override func cellForRow(at indexPath: IndexPath) -> UITableViewCell? {
+  override public func cellForRow(at indexPath: IndexPath) -> UITableViewCell? {
     
     let cell = self.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! BaseTableViewCell<U>
     cell.item = self.items[indexPath.row]
