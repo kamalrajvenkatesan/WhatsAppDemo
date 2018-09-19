@@ -9,15 +9,11 @@
 import UIKit
 import Shared
 
-struct ChatList {
-  var data: String
-}
+class ChatListTableViewCell: BaseTableViewCell<Chat> {
 
-class ChatListTableViewCell: BaseTableViewCell<ChatList> {
-
-  override var item: ChatList! {
+  override var item: Chat! {
     didSet {
-      self.textLabel?.text = item.data
+      self.textLabel?.text = item._id
     }
   }
 
