@@ -13,7 +13,7 @@ open class BaseTableViewController<T: BaseTableViewCell<M>, M>: UITableViewContr
   /** Data that should be listed*/
   open var items = [M]()
 
-  let cellReuseId = "CellId"
+  let cellReuseId = "ChatListTableViewCell"
 
   override open func viewDidLoad() {
     super.viewDidLoad()
@@ -33,7 +33,7 @@ open class BaseTableViewController<T: BaseTableViewCell<M>, M>: UITableViewContr
   }
 
   open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! BaseTableViewCell<M>
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath) as! BaseTableViewCell<M>
     cell.item = self.items[indexPath.row]
 
     return cell

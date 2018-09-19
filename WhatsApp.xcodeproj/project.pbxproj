@@ -16,10 +16,9 @@
 		5287B1E22152413D00CB2812 /* WhatsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B1E12152413D00CB2812 /* WhatsAppTests.swift */; };
 		5287B1ED2152413D00CB2812 /* WhatsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B1EC2152413D00CB2812 /* WhatsAppUITests.swift */; };
 		5287B210215243F100CB2812 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287B20F215243F100CB2812 /* Shared.framework */; };
-		5287B2192152484500CB2812 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B2172152484500CB2812 /* ChatListTableViewCell.swift */; };
-		5287B21A2152484500CB2812 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5287B2182152484500CB2812 /* ChatListTableViewCell.xib */; };
 		5287B22121529DCE00CB2812 /* Chat.json in Resources */ = {isa = PBXBuildFile; fileRef = 5287B22021529DCE00CB2812 /* Chat.json */; };
 		5287B22321529E3700CB2812 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B22221529E3700CB2812 /* Mapper.swift */; };
+		5287B22C2152CA1800CB2812 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B22B2152CA1800CB2812 /* ChatListTableViewCell.swift */; };
 		A790B09CD61DB3CDE8243E17 /* Pods_WhatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97AAE52842403D147DE9CE7 /* Pods_WhatsApp.framework */; };
 		AE898A831AC8F0662337F419 /* Pods_WhatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB667A43735689729D527B1 /* Pods_WhatsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,10 +58,9 @@
 		5287B1EC2152413D00CB2812 /* WhatsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppUITests.swift; sourceTree = "<group>"; };
 		5287B1EE2152413D00CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5287B20F215243F100CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5287B2172152484500CB2812 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
-		5287B2182152484500CB2812 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		5287B22021529DCE00CB2812 /* Chat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Chat.json; sourceTree = "<group>"; };
 		5287B22221529E3700CB2812 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		5287B22B2152CA1800CB2812 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
 		A97AAE52842403D147DE9CE7 /* Pods_WhatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B3D6337FDAA0D1170D729E /* Pods-WhatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsApp/Pods-WhatsApp.release.xcconfig"; sourceTree = "<group>"; };
 		BC6FA5326AD22ADCEEA412C4 /* Pods_WhatsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,8 +157,7 @@
 		5287B2162152482600CB2812 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5287B2172152484500CB2812 /* ChatListTableViewCell.swift */,
-				5287B2182152484500CB2812 /* ChatListTableViewCell.xib */,
+				5287B22B2152CA1800CB2812 /* ChatListTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -313,7 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5287B1D72152413D00CB2812 /* LaunchScreen.storyboard in Resources */,
-				5287B21A2152484500CB2812 /* ChatListTableViewCell.xib in Resources */,
 				5287B1D42152413D00CB2812 /* Assets.xcassets in Resources */,
 				5287B22121529DCE00CB2812 /* Chat.json in Resources */,
 				5287B1D22152413C00CB2812 /* Main.storyboard in Resources */,
@@ -399,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5287B22321529E3700CB2812 /* Mapper.swift in Sources */,
-				5287B2192152484500CB2812 /* ChatListTableViewCell.swift in Sources */,
+				5287B22C2152CA1800CB2812 /* ChatListTableViewCell.swift in Sources */,
 				5287B1CF2152413C00CB2812 /* ViewController.swift in Sources */,
 				5287B1CD2152413C00CB2812 /* AppDelegate.swift in Sources */,
 			);

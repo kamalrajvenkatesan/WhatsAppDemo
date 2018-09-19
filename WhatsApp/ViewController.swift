@@ -16,6 +16,7 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
     super.viewDidLoad()
 
     items = loadJson(type: [Chat].self, fileName: "Chat") ?? []
+
   }
 
 
