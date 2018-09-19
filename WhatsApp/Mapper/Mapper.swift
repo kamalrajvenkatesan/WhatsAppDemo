@@ -8,15 +8,11 @@
 
 import Foundation
 
-struct ChatResponse: Decodable {
-  var chat: [Chat]
-}
-
 struct Chat: Decodable {
   var _id: String
-  var index: String
+  var index: Int
   var picture: String
   var name: String
-  var time: Date
+  var time: String
   var message: String
 }
