@@ -15,6 +15,10 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    // Search bar
+    let searchBar = UISearchController(searchResultsController: nil)
+    self.navigationItem.searchController = searchBar
+
     items = loadJson(type: [Chat].self, fileName: "Chat") ?? []
 
   }
@@ -25,4 +29,3 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
   }
 
 }
-
