@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol ConfigurableCell {
+  associatedtype U // Data type
+  func configure(data: U)
+}

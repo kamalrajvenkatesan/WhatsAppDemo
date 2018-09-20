@@ -12,6 +12,7 @@
 		5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */; };
 		5287B21E2152993600CB2812 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B21D2152993600CB2812 /* Helper.swift */; };
 		5287B22A2152BCFF00CB2812 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B2292152BCFF00CB2812 /* Extension.swift */; };
+		5287B25A215344F600CB2812 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B259215344F600CB2812 /* CellConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		5287B21D2152993600CB2812 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5287B2292152BCFF00CB2812 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		5287B259215344F600CB2812 /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		5287B206215243B200CB2812 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5287B258215344C400CB2812 /* Cell Config */,
 				5287B2112152449D00CB2812 /* Generic Table View */,
 				5287B21D2152993600CB2812 /* Helper.swift */,
 				5287B2292152BCFF00CB2812 /* Extension.swift */,
@@ -70,6 +73,14 @@
 				5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */,
 			);
 			path = "Generic Table View";
+			sourceTree = "<group>";
+		};
+		5287B258215344C400CB2812 /* Cell Config */ = {
+			isa = PBXGroup;
+			children = (
+				5287B259215344F600CB2812 /* CellConfigurator.swift */,
+			);
+			path = "Cell Config";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 				5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */,
 				5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */,
 				5287B21E2152993600CB2812 /* Helper.swift in Sources */,
+				5287B25A215344F600CB2812 /* CellConfigurator.swift in Sources */,
 				5287B22A2152BCFF00CB2812 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
