@@ -10,6 +10,8 @@
 		05D8BA205A495E21C23BAB8C /* Pods_WhatsApp_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9A5467702CDB8295F0BDDB /* Pods_WhatsApp_Shared.framework */; };
 		5255EBF42154195D007C985A /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBF32154195D007C985A /* Mapper.swift */; };
 		5255EBF721541992007C985A /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBF621541992007C985A /* MessageModel.swift */; };
+		5255EBF921541F99007C985A /* ChatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBF821541F99007C985A /* ChatListModel.swift */; };
+		5255EBFB21542115007C985A /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBFA21542115007C985A /* Mapper.swift */; };
 		5287B209215243B200CB2812 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B207215243B200CB2812 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B212215244D000CB2812 /* BaseTableViewCell.swift */; };
 		5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */; };
@@ -23,6 +25,8 @@
 		469FFD58B392BE8AEB2E52F1 /* Pods-WhatsApp-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp-Shared.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WhatsApp-Shared/Pods-WhatsApp-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		5255EBF32154195D007C985A /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ../Chat/Chat/Mapper.swift; sourceTree = "<group>"; };
 		5255EBF621541992007C985A /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		5255EBF821541F99007C985A /* ChatListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModel.swift; sourceTree = "<group>"; };
+		5255EBFA21542115007C985A /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ../WhatsApp/Mapper/Mapper.swift; sourceTree = "<group>"; };
 		5287B204215243B200CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B207215243B200CB2812 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		5287B208215243B200CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				5255EBF621541992007C985A /* MessageModel.swift */,
+				5255EBF821541F99007C985A /* ChatListModel.swift */,
 			);
 			path = "Data Base";
 			sourceTree = "<group>";
@@ -58,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				5255EBF32154195D007C985A /* Mapper.swift */,
+				5255EBFA21542115007C985A /* Mapper.swift */,
 				5287B206215243B200CB2812 /* Shared */,
 				5287B205215243B200CB2812 /* Products */,
 				F85008FE9EFB37C398719F1E /* Pods */,
@@ -222,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5255EBFB21542115007C985A /* Mapper.swift in Sources */,
 				5255EBF42154195D007C985A /* Mapper.swift in Sources */,
 				5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */,
 				5255EBF721541992007C985A /* MessageModel.swift in Sources */,
+				5255EBF921541F99007C985A /* ChatListModel.swift in Sources */,
 				5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */,
 				5287B21E2152993600CB2812 /* Helper.swift in Sources */,
 				5287B25A215344F600CB2812 /* CellConfigurator.swift in Sources */,
