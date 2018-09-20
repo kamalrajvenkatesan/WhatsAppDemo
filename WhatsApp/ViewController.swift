@@ -29,4 +29,11 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
     return 70
   }
 
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = ChatViewController()
+
+    self.navigationController?.pushViewController(vc, animated: true)
+    
+  }
+
 }
