@@ -26,11 +26,11 @@ public class ChatViewController: UIViewController {
         viewModel = json.map { chatTextCellConfig.init(item: $0) }
       }
 
+      // Table View
       tableView = UITableView(frame: self.view.frame)
       tableView?.dataSource = self
-
       tableView?.register(TextCell.self, forCellReuseIdentifier: "TextCell")
-
+      tableView?.separatorStyle = .none
       self.view.addSubview(tableView!)
 
     }
