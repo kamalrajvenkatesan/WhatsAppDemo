@@ -15,6 +15,9 @@ public class ChatListModel: Object {
   @objc public dynamic var userImage = ""
   public let messages = List<MessageModel>()
 
+  override public static func primaryKey() -> String? {
+    return "_id"
+  }
 
   public static func initilise(data: Chat) -> ChatListModel {
 

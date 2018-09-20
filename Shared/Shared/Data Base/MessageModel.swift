@@ -17,6 +17,10 @@ public class MessageModel: Object {
   @objc public dynamic var time = ""
   @objc public dynamic var isSent = true
 
+  override public static func primaryKey() -> String? {
+    return "_id"
+  }
+
   public static func initilise(data: Message) -> MessageModel {
 
     let model = MessageModel()
