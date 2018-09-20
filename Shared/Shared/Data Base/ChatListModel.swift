@@ -14,6 +14,7 @@ public class ChatListModel: Object {
   @objc public dynamic var userName = ""
   @objc public dynamic var userImage = ""
   public let messages = List<MessageModel>()
+  @objc public dynamic var recentInterationTime = Date()
 
   override public static func primaryKey() -> String? {
     return "_id"

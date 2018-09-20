@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
 /** load json from json file */
 public func loadJson<T: Decodable>(type: T.Type, fileName: String) -> T? {
 
   guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
-
     return nil
   }
   do {
@@ -24,6 +24,18 @@ public func loadJson<T: Decodable>(type: T.Type, fileName: String) -> T? {
   } catch let error {
     print(error)
     return nil
+  }
+
+}
+
+public func saveJsonIntoDataBase() {
+  if let jsonData = loadJson(type: [Chat].self, fileName: "Chat") {
+    let dataToSave = jsonData.map{ ChatListModel.initilise(data: $0) }
+    let realm = try! Realm()
+
+    try! realm.write {
+      realm.add(dataToSave)
+    }
   }
 
 }

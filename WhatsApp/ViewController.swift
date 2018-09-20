@@ -9,6 +9,7 @@
 import UIKit
 import Shared
 import Chat
+import RealmSwift
 
 class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListModel> {
 
@@ -20,9 +21,11 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     let searchBar = UISearchController(searchResultsController: nil)
     self.navigationItem.searchController = searchBar
 
-//    items = loadJson(type: [Chat].self, fileName: "Chat") ?? []
+    saveJsonIntoDataBase()
 
-  }
+    items = Array(try! Realm().objects(ChatListModel.self).sorted(byKeyPath: "recentInterationTime", ascending: true))
+
+    }
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
