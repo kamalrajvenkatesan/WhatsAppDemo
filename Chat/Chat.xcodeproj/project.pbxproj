@@ -12,6 +12,8 @@
 		5287B248215342D100CB2812 /* Chat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B23A215342D100CB2812 /* Chat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287B252215343AB00CB2812 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B251215343AB00CB2812 /* TextCell.swift */; };
 		5287B255215343BF00CB2812 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287B254215343BF00CB2812 /* Shared.framework */; };
+		5287B25C2153492000CB2812 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25B2153492000CB2812 /* Helper.swift */; };
+		5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25E21534A1000CB2812 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		5287B247215342D100CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5287B251215343AB00CB2812 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		5287B254215343BF00CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5287B25B2153492000CB2812 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5287B25E21534A1000CB2812 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,6 @@
 		5287B22D215342D100CB2812 = {
 			isa = PBXGroup;
 			children = (
-				5287B251215343AB00CB2812 /* TextCell.swift */,
 				5287B239215342D100CB2812 /* Chat */,
 				5287B244215342D100CB2812 /* ChatTests */,
 				5287B238215342D100CB2812 /* Products */,
@@ -78,6 +81,9 @@
 		5287B239215342D100CB2812 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				5287B25D215349F600CB2812 /* Scene */,
+				5287B25B2153492000CB2812 /* Helper.swift */,
+				5287B251215343AB00CB2812 /* TextCell.swift */,
 				5287B23A215342D100CB2812 /* Chat.h */,
 				5287B23B215342D100CB2812 /* Info.plist */,
 			);
@@ -99,6 +105,14 @@
 				5287B254215343BF00CB2812 /* Shared.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5287B25D215349F600CB2812 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5287B25E21534A1000CB2812 /* ChatViewController.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5287B252215343AB00CB2812 /* TextCell.swift in Sources */,
+				5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */,
+				5287B25C2153492000CB2812 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
