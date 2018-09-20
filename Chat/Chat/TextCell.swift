@@ -13,6 +13,8 @@ class TextCell: UITableViewCell, ConfigurableCell {
 
   private let containerView: UIView = {
     let view = UIView()
+    view.layer.cornerRadius = 10.0
+
     return view
   }()
 
@@ -36,12 +38,13 @@ class TextCell: UITableViewCell, ConfigurableCell {
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
 
+    self.backgroundColor = UIColor.clear
+
     self.addSubview(containerView)
     self.containerView.addSubview(messageLabel)
     self.containerView.addSubview(timeLabel)
 
     containerView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 60, paddingBottom: 10, paddingRight: 10, width: 0, height: 0, enableInsets: false)
-    containerView.layer.cornerRadius = 10.0
 
     messageLabel.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: nil, right: containerView.rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 0, paddingRight: 5, width: 0, height: 0, enableInsets: false)
 
@@ -57,7 +60,13 @@ class TextCell: UITableViewCell, ConfigurableCell {
     self.messageLabel.text = data.message
     self.timeLabel.text = "Today"
 
-    self.containerView.backgroundColor = (data.status == "sent") ? .green : .white
+    self.containerView.backgroundColor = (data.status == "sent") ? #colorLiteral(red: 0.8270000219, green: 0.976000011, blue: 0.7179999948, alpha: 1) : .white
+
+    moveLabel(sent: data.status == "sent")
+  }
+
+  private func moveLabel(sent: Bool) {
+
 
   }
 
