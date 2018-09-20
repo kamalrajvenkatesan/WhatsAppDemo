@@ -14,6 +14,7 @@
 		5287B255215343BF00CB2812 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287B254215343BF00CB2812 /* Shared.framework */; };
 		5287B25C2153492000CB2812 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25B2153492000CB2812 /* Helper.swift */; };
 		5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25E21534A1000CB2812 /* ChatViewController.swift */; };
+		5287B26321535FEF00CB2812 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B26221535FEF00CB2812 /* Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		5287B254215343BF00CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B25B2153492000CB2812 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5287B25E21534A1000CB2812 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5287B26221535FEF00CB2812 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				5287B251215343AB00CB2812 /* TextCell.swift */,
 				5287B23A215342D100CB2812 /* Chat.h */,
 				5287B23B215342D100CB2812 /* Info.plist */,
+				5287B26221535FEF00CB2812 /* Mapper.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5287B26321535FEF00CB2812 /* Mapper.swift in Sources */,
 				5287B252215343AB00CB2812 /* TextCell.swift in Sources */,
 				5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */,
 				5287B25C2153492000CB2812 /* Helper.swift in Sources */,

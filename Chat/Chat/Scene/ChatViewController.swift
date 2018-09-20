@@ -22,15 +22,14 @@ public class ChatViewController: UIViewController {
       // Navigation bar setup
       self.navigationController?.navigationBar.prefersLargeTitles = false
 
-      viewModel = [ chatTextCellConfig.init(item: String("Kamal"))
-      ]
-
+      if let json = loadJson(type: [Message].self, fileName: "ChatOne") {
+        viewModel = json.map { chatTextCellConfig.init(item: $0) }
+      }
 
       tableView = UITableView(frame: self.view.frame)
       tableView?.dataSource = self
 
       tableView?.register(TextCell.self, forCellReuseIdentifier: "TextCell")
-
 
       self.view.addSubview(tableView!)
 
