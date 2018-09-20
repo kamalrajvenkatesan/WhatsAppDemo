@@ -46,3 +46,12 @@ extension UIView {
   }
 
 }
+
+extension UITextField {
+  /** Left padding */
+  public func setPadding(_ leftMargin: CGFloat) {
+    let view = UIView(frame: CGRect(x: 0, y: 0, width: leftMargin, height: 0))
+    self.leftViewMode = UITextFieldViewMode.always
+    self.leftView = view
+  }
+}
