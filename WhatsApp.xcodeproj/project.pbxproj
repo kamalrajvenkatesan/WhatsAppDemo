@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		068B2D0D2103EF7AC4496887 /* Pods_WhatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6FA5326AD22ADCEEA412C4 /* Pods_WhatsAppUITests.framework */; };
+		5255EBF02154176C007C985A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5255EBEF2154176C007C985A /* Realm.framework */; };
+		5255EBF22154176C007C985A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5255EBF12154176C007C985A /* RealmSwift.framework */; };
 		5287B1CD2152413C00CB2812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B1CC2152413C00CB2812 /* AppDelegate.swift */; };
 		5287B1CF2152413C00CB2812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B1CE2152413C00CB2812 /* ViewController.swift */; };
 		5287B1D22152413C00CB2812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5287B1D02152413C00CB2812 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		186ECA7EC9AD64AF38277168 /* Pods-WhatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsAppUITests/Pods-WhatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2E20865F5EDD018E74EF8D84 /* Pods-WhatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsAppUITests/Pods-WhatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3527F9488CC09AC81EF962D8 /* Pods-WhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatsApp/Pods-WhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5255EBEF2154176C007C985A /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5255EBF12154176C007C985A /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B1C92152413C00CB2812 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B1CC2152413C00CB2812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5287B1CE2152413C00CB2812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5255EBF02154176C007C985A /* Realm.framework in Frameworks */,
+				5255EBF22154176C007C985A /* RealmSwift.framework in Frameworks */,
 				5287B257215343DE00CB2812 /* Chat.framework in Frameworks */,
 				5287B210215243F100CB2812 /* Shared.framework in Frameworks */,
 				A790B09CD61DB3CDE8243E17 /* Pods_WhatsApp.framework in Frameworks */,
@@ -187,6 +193,8 @@
 		B0F2EE539C74347FCB2F42D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5255EBEF2154176C007C985A /* Realm.framework */,
+				5255EBF12154176C007C985A /* RealmSwift.framework */,
 				5287B256215343DE00CB2812 /* Chat.framework */,
 				5287B20F215243F100CB2812 /* Shared.framework */,
 				A97AAE52842403D147DE9CE7 /* Pods_WhatsApp.framework */,
@@ -220,6 +228,7 @@
 				5287B1C52152413C00CB2812 /* Sources */,
 				5287B1C62152413C00CB2812 /* Frameworks */,
 				5287B1C72152413C00CB2812 /* Resources */,
+				BEB30BDDE7B473B8538043B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,6 +402,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEB30BDDE7B473B8538043B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhatsApp/Pods-WhatsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatsApp/Pods-WhatsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
