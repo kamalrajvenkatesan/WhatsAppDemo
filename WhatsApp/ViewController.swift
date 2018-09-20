@@ -8,6 +8,7 @@
 
 import UIKit
 import Shared
+import Chat
 
 class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
 
