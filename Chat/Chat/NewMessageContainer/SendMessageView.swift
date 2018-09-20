@@ -24,7 +24,8 @@ class SendMessageView: UIView {
 
   private let button: UIButton = {
     let btn = UIButton()
-    btn.setImage(#imageLiteral(resourceName: "Settings"), for: .normal)
+    btn.setImage(#imageLiteral(resourceName: "Send"), for: .normal)
+    btn.tintColor = UIColor.lightGray
     return btn
   }()
 
@@ -40,7 +41,7 @@ class SendMessageView: UIView {
     self.addSubview(button)
 
     textField.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: 0, height: 0, enableInsets: false)
-    button.anchor(top: topAnchor, left: textField.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: 0, height: 0, enableInsets: false)
+    button.anchor(top: topAnchor, left: textField.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: 30, height: 30, enableInsets: false)
 
   }
 
