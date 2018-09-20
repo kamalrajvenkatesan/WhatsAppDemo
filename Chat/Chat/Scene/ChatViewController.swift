@@ -31,6 +31,7 @@ public class ChatViewController: UIViewController {
       tableView?.dataSource = self
       tableView?.register(TextCell.self, forCellReuseIdentifier: "TextCell")
       tableView?.separatorStyle = .none
+      tableView?.backgroundColor = #colorLiteral(red: 0.7490000129, green: 0.8159999847, blue: 0.9139999747, alpha: 1)
       self.view.addSubview(tableView!)
 
     }
