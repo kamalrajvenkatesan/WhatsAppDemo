@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Message: Decodable {
+public struct Message: Decodable {
   var _id: String
   var time: String
   var message: String

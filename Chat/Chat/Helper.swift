@@ -9,4 +9,4 @@
 import Foundation
 import Shared
 
-typealias chatTextCellConfig = TableCellConfigurator<TextCell, Message>
+typealias chatTextCellConfig = TableCellConfigurator<TextCell, MessageModel>

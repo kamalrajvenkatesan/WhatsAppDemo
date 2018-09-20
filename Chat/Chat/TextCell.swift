@@ -58,10 +58,10 @@ class TextCell: UITableViewCell, ConfigurableCell {
   }
 
 
-  func configure(data: Message) {
+  func configure(data: MessageModel) {
     self.messageLabel.text = data.message
     self.timeLabel.text = "Today"
 
-    self.containerView.backgroundColor = (data.status == "sent") ? #colorLiteral(red: 0.8270000219, green: 0.976000011, blue: 0.7179999948, alpha: 1) : .white
+    self.containerView.backgroundColor = (data.isSent) ? #colorLiteral(red: 0.8270000219, green: 0.976000011, blue: 0.7179999948, alpha: 1) : .white
   }
 }

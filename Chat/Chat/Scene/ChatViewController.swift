@@ -23,7 +23,7 @@ public class ChatViewController: UIViewController {
       self.navigationController?.navigationBar.prefersLargeTitles = false
 
       if let json = loadJson(type: [Message].self, fileName: "ChatOne") {
-        viewModel = json.map { chatTextCellConfig.init(item: $0) }
+//        viewModel = json.map { chatTextCellConfig.init(item: $0) }
       }
 
       // Table View

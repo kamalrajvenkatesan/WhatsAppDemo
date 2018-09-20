@@ -10,12 +10,12 @@ import Foundation
 import RealmSwift
 
 public class MessageModel: Object {
-  @objc dynamic var _id = ""
-  @objc dynamic var chatId = ""
-  @objc dynamic var message = ""
-  @objc dynamic var date = ""
-  @objc dynamic var time = ""
-  @objc dynamic var isSent = true
+  @objc public dynamic var _id = ""
+  @objc public dynamic var chatId = ""
+  @objc public dynamic var message = ""
+  @objc public dynamic var date = ""
+  @objc public dynamic var time = ""
+  @objc public dynamic var isSent = true
 
   public static func initilise(data: Message) -> MessageModel {
 
