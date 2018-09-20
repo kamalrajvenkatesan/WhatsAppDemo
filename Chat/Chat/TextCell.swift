@@ -38,6 +38,8 @@ class TextCell: UITableViewCell, ConfigurableCell {
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
 
+    self.selectionStyle = .none // remove selection
+
     self.backgroundColor = UIColor.clear
 
     self.addSubview(containerView)
