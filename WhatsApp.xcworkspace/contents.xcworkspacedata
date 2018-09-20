@@ -10,4 +10,11 @@
    <FileRef
       location = "group:Shared/Shared.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Features">
+      <FileRef
+         location = "group:Chat/Chat.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
