@@ -11,8 +11,8 @@ import Shared
 
 class TextCell: UITableViewCell, ConfigurableCell {
 
-  func configure(data: String) {
-    self.textLabel?.text = data
+  func configure(data: Message) {
+    self.textLabel?.text = data.message
   }
 
 }

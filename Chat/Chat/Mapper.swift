@@ -1,5 +1,5 @@
 //
-//  Helper.swift
+//  Mapper.swift
 //  Chat
 //
 //  Created by kamalraj venkatesan on 20/09/18.
@@ -7,6 +7,10 @@
 //
 
 import Foundation
-import Shared
 
-typealias chatTextCellConfig = TableCellConfigurator<TextCell, Message>
+struct Message: Decodable {
+  var _id: String
+  var time: String
+  var message: String
+  var status: String
+}
