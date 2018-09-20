@@ -27,13 +27,16 @@ public class ChatViewController: UIViewController {
       }
 
       // Table View
-      tableView = UITableView(frame: self.view.frame)
+      tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 50))
       tableView?.dataSource = self
       tableView?.register(TextCell.self, forCellReuseIdentifier: "TextCell")
       tableView?.separatorStyle = .none
       tableView?.backgroundColor = #colorLiteral(red: 0.7490000129, green: 0.8159999847, blue: 0.9139999747, alpha: 1)
       self.view.addSubview(tableView!)
 
+      //
+      let sendMessageView = SendMessageView(frame: CGRect(x: 0, y: tableView!.frame.height, width: self.view.frame.width, height: 50))
+      self.view.addSubview(sendMessageView)
     }
 
   override public func didReceiveMemoryWarning() {

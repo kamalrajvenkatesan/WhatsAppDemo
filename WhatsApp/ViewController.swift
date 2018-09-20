@@ -22,6 +22,9 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
 
     items = loadJson(type: [Chat].self, fileName: "Chat") ?? []
 
+    // Hide tab bar on push
+    self.hidesBottomBarWhenPushed = true 
+
   }
 
 

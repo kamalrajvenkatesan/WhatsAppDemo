@@ -61,14 +61,5 @@ class TextCell: UITableViewCell, ConfigurableCell {
     self.timeLabel.text = "Today"
 
     self.containerView.backgroundColor = (data.status == "sent") ? #colorLiteral(red: 0.8270000219, green: 0.976000011, blue: 0.7179999948, alpha: 1) : .white
-
-    moveLabel(sent: data.status == "sent")
   }
-
-  private func moveLabel(sent: Bool) {
-
-
-  }
-
-
 }

@@ -15,6 +15,7 @@
 		5287B25C2153492000CB2812 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25B2153492000CB2812 /* Helper.swift */; };
 		5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25E21534A1000CB2812 /* ChatViewController.swift */; };
 		5287B26321535FEF00CB2812 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B26221535FEF00CB2812 /* Mapper.swift */; };
+		5287B2682153722500CB2812 /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B2672153722500CB2812 /* SendMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		5287B25B2153492000CB2812 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5287B25E21534A1000CB2812 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		5287B26221535FEF00CB2812 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		5287B2672153722500CB2812 /* SendMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		5287B239215342D100CB2812 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				5287B266215371D600CB2812 /* NewMessageContainer */,
 				5287B25D215349F600CB2812 /* Scene */,
 				5287B25B2153492000CB2812 /* Helper.swift */,
 				5287B251215343AB00CB2812 /* TextCell.swift */,
@@ -116,6 +119,14 @@
 				5287B25E21534A1000CB2812 /* ChatViewController.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		5287B266215371D600CB2812 /* NewMessageContainer */ = {
+			isa = PBXGroup;
+			children = (
+				5287B2672153722500CB2812 /* SendMessageView.swift */,
+			);
+			path = NewMessageContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5287B2682153722500CB2812 /* SendMessageView.swift in Sources */,
 				5287B26321535FEF00CB2812 /* Mapper.swift in Sources */,
 				5287B252215343AB00CB2812 /* TextCell.swift in Sources */,
 				5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */,
