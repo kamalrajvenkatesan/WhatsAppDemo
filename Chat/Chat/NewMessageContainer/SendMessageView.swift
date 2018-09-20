@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Shared
 
 class SendMessageView: UIView {
 
@@ -17,6 +18,7 @@ class SendMessageView: UIView {
     tf.layer.cornerRadius = 20.0
     tf.layer.borderWidth = 0.5
     tf.layer.borderColor = UIColor.lightGray.cgColor
+    tf.setPadding(10)
     tf.clipsToBounds = true
 
     return tf
@@ -25,7 +27,7 @@ class SendMessageView: UIView {
   private let button: UIButton = {
     let btn = UIButton()
     btn.setImage(#imageLiteral(resourceName: "Send"), for: .normal)
-    btn.tintColor = UIColor.lightGray
+    btn.tintColor = #colorLiteral(red: 0.1019999981, green: 0.451000005, blue: 0.9449999928, alpha: 1)
     return btn
   }()
 
