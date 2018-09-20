@@ -10,7 +10,7 @@ import UIKit
 import Shared
 import Chat
 
-class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
+class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListModel> {
 
 
   override func viewDidLoad() {
@@ -20,7 +20,7 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, Chat> {
     let searchBar = UISearchController(searchResultsController: nil)
     self.navigationItem.searchController = searchBar
 
-    items = loadJson(type: [Chat].self, fileName: "Chat") ?? []
+//    items = loadJson(type: [Chat].self, fileName: "Chat") ?? []
 
   }
 

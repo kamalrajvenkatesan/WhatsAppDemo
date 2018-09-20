@@ -9,7 +9,7 @@
 import UIKit
 import Shared
 
-class ChatListTableViewCell: BaseTableViewCell<Chat> {
+class ChatListTableViewCell: BaseTableViewCell<ChatListModel> {
 
   private let avatarView: UIImageView = {
     let imageView = UIImageView()
@@ -45,11 +45,11 @@ class ChatListTableViewCell: BaseTableViewCell<Chat> {
     return lbl
   }()
 
-  override var item: Chat! {
+  override var item: ChatListModel! {
     didSet {
-      nameLabel.text = item.name
-      timeLabel.text = item.time
-      messageLabel.text = item.message
+      nameLabel.text = "item.name"
+      timeLabel.text = "item.time"
+      messageLabel.text = "item.message"
     }
   }
 

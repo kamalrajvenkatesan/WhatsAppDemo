@@ -14,3 +14,12 @@ public struct Message: Decodable {
   var message: String
   var status: String
 }
+
+public struct Chat: Decodable {
+  public var _id: String
+  public var index: Int
+  public var picture: String
+  public var name: String
+  public var time: String
+  public var message: String
+}
