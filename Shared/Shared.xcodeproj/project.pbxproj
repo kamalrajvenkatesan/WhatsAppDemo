@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D8BA205A495E21C23BAB8C /* Pods_WhatsApp_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9A5467702CDB8295F0BDDB /* Pods_WhatsApp_Shared.framework */; };
 		5287B209215243B200CB2812 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B207215243B200CB2812 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B212215244D000CB2812 /* BaseTableViewCell.swift */; };
 		5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		057A96F9E5ED8A70E464DF3E /* Pods-WhatsApp-Shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp-Shared.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WhatsApp-Shared/Pods-WhatsApp-Shared.release.xcconfig"; sourceTree = "<group>"; };
+		469FFD58B392BE8AEB2E52F1 /* Pods-WhatsApp-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp-Shared.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WhatsApp-Shared/Pods-WhatsApp-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		5287B204215243B200CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B207215243B200CB2812 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		5287B208215243B200CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		5287B21D2152993600CB2812 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5287B2292152BCFF00CB2812 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5287B259215344F600CB2812 /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		7B9A5467702CDB8295F0BDDB /* Pods_WhatsApp_Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp_Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D8BA205A495E21C23BAB8C /* Pods_WhatsApp_Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5287B206215243B200CB2812 /* Shared */,
 				5287B205215243B200CB2812 /* Products */,
+				F85008FE9EFB37C398719F1E /* Pods */,
+				6283CFA2398024955AD0FB91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +90,23 @@
 			path = "Cell Config";
 			sourceTree = "<group>";
 		};
+		6283CFA2398024955AD0FB91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B9A5467702CDB8295F0BDDB /* Pods_WhatsApp_Shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F85008FE9EFB37C398719F1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				469FFD58B392BE8AEB2E52F1 /* Pods-WhatsApp-Shared.debug.xcconfig */,
+				057A96F9E5ED8A70E464DF3E /* Pods-WhatsApp-Shared.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -101,6 +125,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5287B20C215243B200CB2812 /* Build configuration list for PBXNativeTarget "Shared" */;
 			buildPhases = (
+				EB80B3167AB0B3B1798259A7 /* [CP] Check Pods Manifest.lock */,
 				5287B1FF215243B200CB2812 /* Sources */,
 				5287B200215243B200CB2812 /* Frameworks */,
 				5287B201215243B200CB2812 /* Headers */,
@@ -156,6 +181,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB80B3167AB0B3B1798259A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsApp-Shared-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5287B1FF215243B200CB2812 /* Sources */ = {
@@ -295,6 +341,7 @@
 		};
 		5287B20D215243B200CB2812 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469FFD58B392BE8AEB2E52F1 /* Pods-WhatsApp-Shared.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -322,6 +369,7 @@
 		};
 		5287B20E215243B200CB2812 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 057A96F9E5ED8A70E464DF3E /* Pods-WhatsApp-Shared.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
