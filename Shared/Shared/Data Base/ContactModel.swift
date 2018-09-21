@@ -17,4 +17,13 @@ public class ContactModel: Object {
     return "phoneNumber"
   }
 
+  public static func initilise(phoneNumber: String, name: String) -> ContactModel {
+    let model = ContactModel()
+
+    model.phoneNumber = phoneNumber
+    model.name = name
+
+    return model
+  }
+
 }

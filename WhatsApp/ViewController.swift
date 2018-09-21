@@ -14,7 +14,6 @@ import Contacts
 
 class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListModel> {
 
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -26,7 +25,7 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
     // Bar button
-    let newChatBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "New Chat"), style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+    let newChatBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "New Chat"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.NavigateToContacts))
     self.navigationItem.rightBarButtonItem = newChatBarButton
 
     let editBarButton = UIBarButtonItem(title: "Edit", style: .plain, target: nil, action: nil)
@@ -51,14 +50,14 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     self.navigationController?.navigationBar.prefersLargeTitles = true
   }
 
+  //MARK: Contacts
   private func getContactsFromAddressBook() {
+    
     let status = CNContactStore.authorizationStatus(for: .contacts)
     if status == .denied || status == .restricted {
       presentSettingsActionSheet()
       return
     }
-
-    // open it
 
     let store = CNContactStore()
     store.requestAccess(for: .contacts) { granted, error in
@@ -81,10 +80,22 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
         print(error)
       }
 
+      var contactsToBeAdded: [ContactModel] = []
 
-      for contact in contacts {
-        print(contact)
+      contacts.forEach { contact in
+        if let name = CNContactFormatter.string(from: contact, style: .fullName) {
+          for number in contact.phoneNumbers {
+            contactsToBeAdded.append(ContactModel.initilise(phoneNumber: number.value.stringValue, name: name))
+          }
+        }
       }
+
+      // adding contacts to db
+      let realm = try! Realm()
+      try! realm.write {
+        realm.add(contactsToBeAdded, update: true)
+      }
+
     }
   }
 
@@ -98,7 +109,14 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     present(alert, animated: true)
   }
 
+  //MARK: Navigation
+  @objc private func NavigateToContacts() {
+    let vc = ContactsViewController()
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
 
+
+  //MARK: Table view Data Source
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 70
   }

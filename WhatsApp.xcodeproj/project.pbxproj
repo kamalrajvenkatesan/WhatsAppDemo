@@ -11,6 +11,8 @@
 		5255EBF02154176C007C985A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5255EBEF2154176C007C985A /* Realm.framework */; };
 		5255EBF22154176C007C985A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5255EBF12154176C007C985A /* RealmSwift.framework */; };
 		5255EBFD21542A12007C985A /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBFC21542A12007C985A /* Mapper.swift */; };
+		5255EC082154D8B5007C985A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EC072154D8B5007C985A /* ContactsViewController.swift */; };
+		5255EC0A2154D8D4007C985A /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EC092154D8D4007C985A /* ContactCell.swift */; };
 		5287B1CD2152413C00CB2812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B1CC2152413C00CB2812 /* AppDelegate.swift */; };
 		5287B1CF2152413C00CB2812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B1CE2152413C00CB2812 /* ViewController.swift */; };
 		5287B1D22152413C00CB2812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5287B1D02152413C00CB2812 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		5255EBEF2154176C007C985A /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255EBF12154176C007C985A /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255EBFC21542A12007C985A /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = Chat/Chat/Mapper.swift; sourceTree = "<group>"; };
+		5255EC072154D8B5007C985A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		5255EC092154D8D4007C985A /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		5287B1C92152413C00CB2812 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B1CC2152413C00CB2812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5287B1CE2152413C00CB2812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			children = (
 				5287B1CC2152413C00CB2812 /* AppDelegate.swift */,
 				5287B1CE2152413C00CB2812 /* ViewController.swift */,
+				5255EC072154D8B5007C985A /* ContactsViewController.swift */,
 				5287B1D02152413C00CB2812 /* Main.storyboard */,
 				5287B2162152482600CB2812 /* Cell */,
 				5287B21F21529DA400CB2812 /* Resource */,
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				5287B22B2152CA1800CB2812 /* ChatListTableViewCell.swift */,
+				5255EC092154D8D4007C985A /* ContactCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -427,10 +433,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5255EC0A2154D8D4007C985A /* ContactCell.swift in Sources */,
 				5255EBFD21542A12007C985A /* Mapper.swift in Sources */,
 				5287B22C2152CA1800CB2812 /* ChatListTableViewCell.swift in Sources */,
 				5287B1CF2152413C00CB2812 /* ViewController.swift in Sources */,
 				5287B1CD2152413C00CB2812 /* AppDelegate.swift in Sources */,
+				5255EC082154D8B5007C985A /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
