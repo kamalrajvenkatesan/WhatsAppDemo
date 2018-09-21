@@ -15,7 +15,10 @@ class ContactsViewController: BaseTableViewController<ContactCell, ContactModel>
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      // Navigation bar setup
+      self.navigationController?.navigationBar.prefersLargeTitles = false
+      self.title = "Contacts"
+
       items = Array(try! Realm().objects(ContactModel.self).sorted(byKeyPath: "name", ascending: true))
     }
 
