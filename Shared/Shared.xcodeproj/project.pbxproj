@@ -11,6 +11,7 @@
 		5255EBF42154195D007C985A /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBF32154195D007C985A /* Mapper.swift */; };
 		5255EBF721541992007C985A /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBF621541992007C985A /* MessageModel.swift */; };
 		5255EBF921541F99007C985A /* ChatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBF821541F99007C985A /* ChatListModel.swift */; };
+		5255EC062154D542007C985A /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EC052154D542007C985A /* ContactModel.swift */; };
 		5287B209215243B200CB2812 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B207215243B200CB2812 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B212215244D000CB2812 /* BaseTableViewCell.swift */; };
 		5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B21B21527D5C00CB2812 /* BaseTableViewController.swift */; };
@@ -25,6 +26,7 @@
 		5255EBF32154195D007C985A /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ../Chat/Chat/Mapper.swift; sourceTree = "<group>"; };
 		5255EBF621541992007C985A /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		5255EBF821541F99007C985A /* ChatListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModel.swift; sourceTree = "<group>"; };
+		5255EC052154D542007C985A /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		5287B204215243B200CB2812 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B207215243B200CB2812 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		5287B208215243B200CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				5255EBF621541992007C985A /* MessageModel.swift */,
 				5255EBF821541F99007C985A /* ChatListModel.swift */,
+				5255EC052154D542007C985A /* ContactModel.swift */,
 			);
 			path = "Data Base";
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				5255EBF42154195D007C985A /* Mapper.swift in Sources */,
 				5287B21C21527D5C00CB2812 /* BaseTableViewController.swift in Sources */,
+				5255EC062154D542007C985A /* ContactModel.swift in Sources */,
 				5255EBF721541992007C985A /* MessageModel.swift in Sources */,
 				5255EBF921541F99007C985A /* ChatListModel.swift in Sources */,
 				5287B213215244D000CB2812 /* BaseTableViewCell.swift in Sources */,
