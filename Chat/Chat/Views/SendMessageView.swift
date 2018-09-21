@@ -48,7 +48,7 @@ class SendMessageView: UIView {
     self.addSubview(button)
 
     textField.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: 0, height: 0, enableInsets: false)
-    button.anchor(top: topAnchor, left: textField.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 5, width: 30, height: 30, enableInsets: false)
+    button.anchor(top: topAnchor, left: textField.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 5, paddingBottom: 10, paddingRight: 5, width: 30, height: 30, enableInsets: false)
 
   }
 
