@@ -5,6 +5,9 @@
 //  Created by kamalraj venkatesan on 20/09/18.
 //  Copyright © 2018 Kamalraj. All rights reserved.
 //
+protocol SendMessageDelegate {
+  func sendNewMessage(text: String?)
+}
 
 import UIKit
 import Shared
@@ -31,6 +34,8 @@ class SendMessageView: UIView {
     return btn
   }()
 
+  var delegate: SendMessageDelegate?
+
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -52,7 +57,8 @@ class SendMessageView: UIView {
   }
 
   @objc private func sendMessage() {
-
+    delegate?.sendNewMessage(text: textField.text)
+    textField.text = ""
   }
 
 }

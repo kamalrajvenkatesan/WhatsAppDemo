@@ -19,6 +19,8 @@ public class ChatViewController: UIViewController {
 
   public var chatId: String?
 
+  var notificationToken: NotificationToken?
+
   override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +33,18 @@ public class ChatViewController: UIViewController {
       // Fethching chat from db
       let realm = try! Realm()
       if chatId != nil, let chat = realm.object(ofType: ChatListModel.self, forPrimaryKey: chatId!) {
-        viewModel = chat.messages.sorted(byKeyPath: "createdTs", ascending: true).map{ chatTextCellConfig.init(item: $0) }
+        let message = chat.messages.sorted(byKeyPath: "createdTs", ascending: true)
+
+        notificationToken = realm.observe({ _,_  in
+          self.viewModel = message.map{ chatTextCellConfig.init(item: $0) }
+          self.tableView?.reloadData()
+
+          //
+          self.tableView?.selectRow(at: IndexPath(row: self.viewModel.count - 1, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.bottom)
+        })
+
+        self.viewModel = message.map{ chatTextCellConfig.init(item: $0) }
+        self.tableView?.reloadData()
       }
 
 
@@ -45,6 +58,7 @@ public class ChatViewController: UIViewController {
 
       //
       let sendMessageView = SendMessageView(frame: CGRect(x: 0, y: tableView!.frame.height, width: self.view.frame.width, height: 50))
+      sendMessageView.delegate = self
       self.view.addSubview(sendMessageView)
     }
 
@@ -70,6 +84,27 @@ public class ChatViewController: UIViewController {
 
 }
 
+extension ChatViewController: SendMessageDelegate {
+  func sendNewMessage(text: String?) {
+    guard text != nil && text != "" else {
+      // Text is empty
+      return
+    }
+
+    let realm = try! Realm()
+    if self.chatId != nil, let chat = realm.object(ofType: ChatListModel.self, forPrimaryKey: self.chatId!) {
+      let messageModel = MessageModel()
+      messageModel._id = UUID.init().uuidString
+      messageModel.message = text!
+      messageModel.chatId = self.chatId!
+      messageModel.isSent = true
+      try! Realm().write {
+        chat.messages.append(messageModel)
+      }
+    }
+  }
+}
+
 extension ChatViewController: UITableViewDataSource {
 
   public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +119,5 @@ extension ChatViewController: UITableViewDataSource {
     data.configure(cell: cell)
     return cell
   }
-
 
 }
