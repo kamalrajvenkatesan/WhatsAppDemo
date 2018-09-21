@@ -21,6 +21,8 @@ public class ChatViewController: UIViewController {
 
   var notificationToken: NotificationToken?
 
+  var needToScroll = false
+
   override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,8 +41,10 @@ public class ChatViewController: UIViewController {
           self.viewModel = message.map{ chatTextCellConfig.init(item: $0) }
           self.tableView?.reloadData()
 
-          //
-          self.tableView?.selectRow(at: IndexPath(row: self.viewModel.count - 1, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.bottom)
+          // Scrolling to bottom
+          if self.viewModel.count > 1 {
+            self.scrollToBottom()
+          }
         })
 
         self.viewModel = message.map{ chatTextCellConfig.init(item: $0) }
@@ -55,6 +59,8 @@ public class ChatViewController: UIViewController {
       tableView?.separatorStyle = .none
       tableView?.backgroundColor = #colorLiteral(red: 0.7490000129, green: 0.8159999847, blue: 0.9139999747, alpha: 1)
       self.view.addSubview(tableView!)
+
+      self.needToScroll = true
 
       //
       let sendMessageView = SendMessageView(frame: CGRect(x: 0, y: tableView!.frame.height, width: self.view.frame.width, height: 50))
@@ -74,12 +80,30 @@ public class ChatViewController: UIViewController {
     self.tabBarController?.tabBar.isHidden = true
   }
 
+  public override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    if (self.needToScroll) {
+      self.scrollToBottom()
+      self.needToScroll = false
+    }
+
+  }
+
     public override func viewWillDisappear(_ animated: Bool) {
       super.viewWillDisappear(animated)
 
       // Unhiding Tabbar
       self.tabBarController?.tabBar.isHidden = false
     }
+
+  private func scrollToBottom() {
+    guard self.tableView != nil, self.tableView!.numberOfRows(inSection: 0) > 1 else {
+      // Table view not available
+      return
+    }
+    self.tableView!.scrollToRow(at: IndexPath(row: self.tableView!.numberOfRows(inSection: 0) - 1, section: 0), at: .bottom, animated: false)
+  }
 
 
 }

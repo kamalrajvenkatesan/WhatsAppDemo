@@ -21,7 +21,11 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     let searchBar = UISearchController(searchResultsController: nil)
     self.navigationItem.searchController = searchBar
 
-    saveJsonIntoDataBase()
+    if !UserDefaults.standard.bool(forKey: "isExistingLogin") {
+      UserDefaults.standard.set(true, forKey: "isExistingLogin")
+      saveJsonIntoDataBase()
+    }
+
 
     items = Array(try! Realm().objects(ChatListModel.self).sorted(byKeyPath: "recentInterationTime", ascending: true))
 
