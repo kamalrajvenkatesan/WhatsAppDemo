@@ -24,6 +24,13 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     // Remove back button title.
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
+    // Bar button
+    let newChatBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "New Chat"), style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+    self.navigationItem.rightBarButtonItem = newChatBarButton
+
+    let editBarButton = UIBarButtonItem(title: "Edit", style: .plain, target: nil, action: nil)
+    self.navigationItem.leftBarButtonItem = editBarButton
+
 
     if !UserDefaults.standard.bool(forKey: "isExistingLogin") {
       UserDefaults.standard.set(true, forKey: "isExistingLogin")
