@@ -33,14 +33,13 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     self.navigationController?.navigationBar.prefersLargeTitles = true
   }
 
-
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 70
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let vc = ChatViewController()
-
+    vc.chatId = items[indexPath.row]._id
     self.navigationController?.pushViewController(vc, animated: true)
     
   }

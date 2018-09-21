@@ -34,7 +34,7 @@ public func saveJsonIntoDataBase() {
     let realm = try! Realm()
 
     try! realm.write {
-      realm.add(dataToSave)
+      realm.add(dataToSave, update: true)
     }
   }
 

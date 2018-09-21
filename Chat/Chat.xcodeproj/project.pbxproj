@@ -16,6 +16,7 @@
 		5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B25E21534A1000CB2812 /* ChatViewController.swift */; };
 		5287B26321535FEF00CB2812 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B26221535FEF00CB2812 /* Mapper.swift */; };
 		5287B2682153722500CB2812 /* SendMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B2672153722500CB2812 /* SendMessageView.swift */; };
+		7E14A30CCD376AC9E76A8452 /* Pods_WhatsApp_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BB94B333132A122A745454 /* Pods_WhatsApp_Chat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,9 @@
 		5287B25E21534A1000CB2812 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		5287B26221535FEF00CB2812 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		5287B2672153722500CB2812 /* SendMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageView.swift; sourceTree = "<group>"; };
+		6D6EDAF7696FF8BA5C4C3204 /* Pods-WhatsApp-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp-Chat.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WhatsApp-Chat/Pods-WhatsApp-Chat.debug.xcconfig"; sourceTree = "<group>"; };
+		877466EE15C47642857C6620 /* Pods-WhatsApp-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsApp-Chat.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WhatsApp-Chat/Pods-WhatsApp-Chat.release.xcconfig"; sourceTree = "<group>"; };
+		B4BB94B333132A122A745454 /* Pods_WhatsApp_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsApp_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5287B255215343BF00CB2812 /* Shared.framework in Frameworks */,
+				7E14A30CCD376AC9E76A8452 /* Pods_WhatsApp_Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,7 @@
 				5287B244215342D100CB2812 /* ChatTests */,
 				5287B238215342D100CB2812 /* Products */,
 				5287B253215343BF00CB2812 /* Frameworks */,
+				8123510031749655CCD6D5A7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				5287B254215343BF00CB2812 /* Shared.framework */,
+				B4BB94B333132A122A745454 /* Pods_WhatsApp_Chat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +136,15 @@
 			path = NewMessageContainer;
 			sourceTree = "<group>";
 		};
+		8123510031749655CCD6D5A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D6EDAF7696FF8BA5C4C3204 /* Pods-WhatsApp-Chat.debug.xcconfig */,
+				877466EE15C47642857C6620 /* Pods-WhatsApp-Chat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -147,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5287B24B215342D100CB2812 /* Build configuration list for PBXNativeTarget "Chat" */;
 			buildPhases = (
+				7AC034D6E31112F14CDAFCCC /* [CP] Check Pods Manifest.lock */,
 				5287B232215342D100CB2812 /* Sources */,
 				5287B233215342D100CB2812 /* Frameworks */,
 				5287B234215342D100CB2812 /* Headers */,
@@ -232,6 +249,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AC034D6E31112F14CDAFCCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsApp-Chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5287B232215342D100CB2812 /* Sources */ = {
@@ -387,6 +425,7 @@
 		};
 		5287B24C215342D100CB2812 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D6EDAF7696FF8BA5C4C3204 /* Pods-WhatsApp-Chat.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -414,6 +453,7 @@
 		};
 		5287B24D215342D100CB2812 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 877466EE15C47642857C6620 /* Pods-WhatsApp-Chat.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

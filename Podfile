@@ -23,7 +23,12 @@ target 'WhatsApp' do
   target 'Shared' do
     project 'Shared/Shared'
     pod 'RealmSwift'
+  end
 
-end
+  target 'Chat' do
+    project 'Chat/Chat'
+    pod 'RealmSwift'
+  end
 
+  
 end

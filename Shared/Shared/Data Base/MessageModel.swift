@@ -15,6 +15,7 @@ public class MessageModel: Object {
   @objc public dynamic var message = ""
   @objc public dynamic var date = ""
   @objc public dynamic var time = ""
+  @objc public dynamic var createdTs = Date()
   @objc public dynamic var isSent = true
 
   override public static func primaryKey() -> String? {

@@ -47,9 +47,9 @@ class ChatListTableViewCell: BaseTableViewCell<ChatListModel> {
 
   override var item: ChatListModel! {
     didSet {
-      nameLabel.text = "item.name"
-      timeLabel.text = "item.time"
-      messageLabel.text = "item.message"
+      nameLabel.text = item.userName
+      timeLabel.text = item.messages.last?.time
+      messageLabel.text = item.messages.last?.message
     }
   }
 

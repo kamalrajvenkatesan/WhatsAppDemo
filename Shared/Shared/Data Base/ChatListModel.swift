@@ -27,6 +27,10 @@ public class ChatListModel: Object {
     model.userName = data.name
     model.userImage = data.picture
 
+    for message in data.messages {
+      model.messages.append( MessageModel.initilise(data: message))
+    }
+
     return model
   }
 

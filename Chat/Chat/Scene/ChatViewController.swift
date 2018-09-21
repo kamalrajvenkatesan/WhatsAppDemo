@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Shared
+import RealmSwift
 
 public class ChatViewController: UIViewController {
 
@@ -16,15 +17,23 @@ public class ChatViewController: UIViewController {
 
   var viewModel: [CellConfigurator] = []
 
+  public var chatId: String?
+
   override public func viewDidLoad() {
         super.viewDidLoad()
+
+      // Hiding Tabbar
+      self.tabBarController?.tabBar.isHidden = true
 
       // Navigation bar setup
       self.navigationController?.navigationBar.prefersLargeTitles = false
 
-      if let json = loadJson(type: [Message].self, fileName: "ChatOne") {
-//        viewModel = json.map { chatTextCellConfig.init(item: $0) }
+      // Fethching chat from db
+      let realm = try! Realm()
+      if chatId != nil, let chat = realm.object(ofType: ChatListModel.self, forPrimaryKey: chatId!) {
+        viewModel = chat.messages.sorted(byKeyPath: "createdTs", ascending: true).map{ chatTextCellConfig.init(item: $0) }
       }
+
 
       // Table View
       tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 50))
@@ -42,6 +51,20 @@ public class ChatViewController: UIViewController {
   override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+  public override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    // Hiding Tabbar
+    self.tabBarController?.tabBar.isHidden = true
+  }
+
+    public override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+
+      // Unhiding Tabbar
+      self.tabBarController?.tabBar.isHidden = false
     }
 
 
