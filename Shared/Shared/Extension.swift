@@ -55,3 +55,22 @@ extension UITextField {
     self.leftView = view
   }
 }
+
+extension Date {
+  
+  /**get date from date in 09/21/18*/
+  public func getDate() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MM/dd/YY"
+    let strMonth = dateFormatter.string(from: self)
+    return strMonth
+  }
+
+  /**get time from date in 11:14*/
+  public func getTime() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "mm:hh"
+    let strMonth = dateFormatter.string(from: self)
+    return strMonth
+  }
+}

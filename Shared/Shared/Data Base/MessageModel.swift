@@ -24,12 +24,14 @@ public class MessageModel: Object {
 
   public static func initilise(data: Message) -> MessageModel {
 
+    let currentDate = Date()
+
     let model = MessageModel()
     model._id = data._id
     model.chatId = data._id
     model.message = data.message
-    model.date = "Today"
-    model.time = data.time
+    model.date = currentDate.getDate()
+    model.time = currentDate.getTime()
     model.isSent = (data.status == "sent")
 
     return model

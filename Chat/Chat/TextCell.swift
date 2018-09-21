@@ -72,14 +72,14 @@ class TextCell: UITableViewCell, ConfigurableCell {
 
   func configure(data: MessageModel) {
     self.messageLabel.text = data.message
-    self.timeLabel.text = "Today"
+    self.timeLabel.text = data.time
 
     self.containerView.backgroundColor = (data.isSent) ? #colorLiteral(red: 0.8270000219, green: 0.976000011, blue: 0.7179999948, alpha: 1) : .white
 
     self.move(isSent: data.isSent)
   }
 
-  func move(isSent: Bool) {
+  private func move(isSent: Bool) {
     self.leftConstraint?.isActive = false
     leftConstraint = containerView.leftAnchor.constraint(equalTo: leftAnchor, constant: (isSent ? 60 : 10))
     leftConstraint?.isActive = true
