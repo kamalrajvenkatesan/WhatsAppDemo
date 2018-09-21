@@ -126,6 +126,10 @@ extension ChatViewController: SendMessageDelegate {
       messageModel.message = text!
       messageModel.chatId = self.chatId!
       messageModel.isSent = true
+      let currentTimeDate = Date()
+      messageModel.date = currentTimeDate.getDate()
+      messageModel.time = currentTimeDate.getTime()
+      
       try! Realm().write {
         chat.messages.append(messageModel)
       }
