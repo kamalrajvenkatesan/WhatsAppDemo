@@ -116,6 +116,9 @@ extension ChatViewController: SendMessageDelegate {
   func sendNewMessage(text: String?) {
     guard text != nil && text != "" else {
       // Text is empty
+      let alert = UIAlertController(title: "Empty!!!", message: "Enter something to send a message!", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+      present(alert, animated: true)
       return
     }
 
