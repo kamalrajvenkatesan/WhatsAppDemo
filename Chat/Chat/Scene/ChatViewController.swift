@@ -47,6 +47,10 @@ public class ChatViewController: UIViewController {
           }
         })
 
+        // User info setup
+        self.navigationItem.titleView = UserInfoView.init(userImage: chat.userImage, name: chat.userName, frame: CGRect(x: 0, y: 0, width: self.view.bounds.width - 50, height: 44))
+
+        // Listing Chat messages
         self.viewModel = message.map{ chatTextCellConfig.init(item: $0) }
         self.tableView?.reloadData()
       }

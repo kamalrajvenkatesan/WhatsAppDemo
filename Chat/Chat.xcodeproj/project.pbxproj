@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5255EBFF2154AA71007C985A /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EBFE2154AA71007C985A /* UserInfoView.swift */; };
 		5287B241215342D100CB2812 /* Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287B237215342D100CB2812 /* Chat.framework */; };
 		5287B246215342D100CB2812 /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287B245215342D100CB2812 /* ChatTests.swift */; };
 		5287B248215342D100CB2812 /* Chat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287B23A215342D100CB2812 /* Chat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5255EBFE2154AA71007C985A /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		5287B237215342D100CB2812 /* Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287B23A215342D100CB2812 /* Chat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
 		5287B23B215342D100CB2812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		5287B239215342D100CB2812 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				5287B266215371D600CB2812 /* NewMessageContainer */,
+				5287B266215371D600CB2812 /* Views */,
 				5287B25D215349F600CB2812 /* Scene */,
 				5287B25B2153492000CB2812 /* Helper.swift */,
 				5287B251215343AB00CB2812 /* TextCell.swift */,
@@ -128,12 +130,13 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		5287B266215371D600CB2812 /* NewMessageContainer */ = {
+		5287B266215371D600CB2812 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				5287B2672153722500CB2812 /* SendMessageView.swift */,
+				5255EBFE2154AA71007C985A /* UserInfoView.swift */,
 			);
-			path = NewMessageContainer;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8123510031749655CCD6D5A7 /* Pods */ = {
@@ -279,6 +282,7 @@
 				5287B2682153722500CB2812 /* SendMessageView.swift in Sources */,
 				5287B26321535FEF00CB2812 /* Mapper.swift in Sources */,
 				5287B252215343AB00CB2812 /* TextCell.swift in Sources */,
+				5255EBFF2154AA71007C985A /* UserInfoView.swift in Sources */,
 				5287B25F21534A1000CB2812 /* ChatViewController.swift in Sources */,
 				5287B25C2153492000CB2812 /* Helper.swift in Sources */,
 			);

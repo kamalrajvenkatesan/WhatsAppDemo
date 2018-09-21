@@ -21,6 +21,10 @@ class ViewController: BaseTableViewController<ChatListTableViewCell, ChatListMod
     let searchBar = UISearchController(searchResultsController: nil)
     self.navigationItem.searchController = searchBar
 
+    // Remove back button title.
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+
     if !UserDefaults.standard.bool(forKey: "isExistingLogin") {
       UserDefaults.standard.set(true, forKey: "isExistingLogin")
       saveJsonIntoDataBase()

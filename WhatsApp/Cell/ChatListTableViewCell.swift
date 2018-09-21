@@ -13,7 +13,6 @@ class ChatListTableViewCell: BaseTableViewCell<ChatListModel> {
 
   private let avatarView: UIImageView = {
     let imageView = UIImageView()
-    imageView.backgroundColor = .black
     imageView.contentMode = .scaleAspectFit
     imageView.clipsToBounds = true
     return imageView
@@ -47,6 +46,7 @@ class ChatListTableViewCell: BaseTableViewCell<ChatListModel> {
 
   override var item: ChatListModel! {
     didSet {
+      avatarView.image = #imageLiteral(resourceName: "user")
       nameLabel.text = item.userName
       timeLabel.text = item.messages.last?.time
       messageLabel.text = item.messages.last?.message
